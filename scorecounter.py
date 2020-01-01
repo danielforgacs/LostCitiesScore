@@ -44,3 +44,5 @@ if __name__ == '__main__':
     print(count_colour(scoretext='234567891'))
     print(count_colour(scoretext='281'))
     print(main(text='234567891'))
+
+    assert count_colour(scoretext='2345678') == -20+2+3+4+5+6+7+8
