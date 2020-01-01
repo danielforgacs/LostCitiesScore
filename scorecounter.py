@@ -16,7 +16,7 @@ def count_colour(scoretext):
 
     totalscrore *= multiplier
 
-    if cardcount >= 1:
+    if cardcount >= 8:
         totalscrore += 20
 
     return totalscrore
@@ -42,4 +42,5 @@ def main(text):
 if __name__ == '__main__':
     print(2+3+4+5+6+7+8+9+10)
     print(count_colour(scoretext='234567891'))
-    # print(main(text='234567891'))
+    print(count_colour(scoretext='281'))
+    print(main(text='234567891'))
