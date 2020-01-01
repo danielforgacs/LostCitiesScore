@@ -1,20 +1,3 @@
-scoretext = 'ddd234567891'
-scoretext = 'd'
-scoretext = 'd1'
-scoretext = '2'
-scoretext = '23'
-scoretext = 'd23'
-scoretext = 'ddd234681'
-scoretext = '281;281'
-scoretext = 'd281;dd281'
-scoretext = '291'
-scoretext = '291;291'
-scoretext = 'd291;291'
-scoretext = 'd291;d291'
-
-
-
-
 def count_colour(scoretext):
     totalscrore = -20
     multiplier = 1
