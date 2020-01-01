@@ -23,11 +23,33 @@ SCORE_TEXTS = [
     ['381', 1],
     ['d381', 2],
 
-    ['dd23578;7891;34567', 25],
+    # ['dd23578;7891;34567', 25],
+    # ['7891', 5],
     # 15+5+5
+
+    ['23578', 5],
+    ['dd23578', 15],
+    ['34567', 5],
+]
+
+COLOUR_TEXTS = [
+    ['7891', 14],
+    ['d7891', 14*2],
+    ['dd7891', 14*3],
+
+    ['2', -18],
+    ['23', -20+2+3],
+    ['234', -20+2+3+4],
+    ['23456789', -20+2+3+4+5+6+7+8+9 +20],
+    ['23456789', 24+20],
 ]
 
 
 @pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
 def test_score_counter(txt, expected):
     assert counter.main(text=txt) == expected
+
+
+@pytest.mark.parametrize('txt, expected', COLOUR_TEXTS)
+def test_count_colour(txt, expected):
+    assert counter.count_colour(scoretext=txt) == expected

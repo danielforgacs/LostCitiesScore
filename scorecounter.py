@@ -1,9 +1,11 @@
 def count_colour(scoretext):
     totalscrore = -20
     multiplier = 1
-    count = 0
+    cardcount = len(scoretext)
 
-    for count, item in enumerate(scoretext):
+    print('cardcount:', cardcount)
+
+    for item in scoretext:
         if item == 'd':
             multiplier += 1
         elif item == '1':
@@ -14,7 +16,7 @@ def count_colour(scoretext):
 
     totalscrore *= multiplier
 
-    if count > 7:
+    if cardcount >= 1:
         totalscrore += 20
 
     return totalscrore
@@ -38,8 +40,6 @@ def main(text):
 
 
 if __name__ == '__main__':
-    # scoretexts = scoretext.split(';')
-    # print(scoretexts)
-    scoretext = input('score: ')
-
-    print(main(text=scoretext))
+    print(2+3+4+5+6+7+8+9+10)
+    print(count_colour(scoretext='234567891'))
+    # print(main(text='234567891'))
