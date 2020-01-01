@@ -38,6 +38,19 @@ def count_colour(scoretext):
 
 
 
+def main(text):
+    scoretexts = text.split(';')
+
+    score = 0
+
+    for txt in scoretexts:
+        score += count_colour(scoretext=txt)
+
+    return score
+
+
+
+
 
 
 
@@ -45,12 +58,5 @@ if __name__ == '__main__':
     # scoretexts = scoretext.split(';')
     # print(scoretexts)
     scoretext = input('score: ')
-    scoretexts = scoretext.split(';')
-    print(scoretexts)
 
-    score = 0
-
-    for txt in scoretexts:
-        score += count_colour(scoretext=txt)
-
-    print(score)
+    print(main(text=scoretext))
