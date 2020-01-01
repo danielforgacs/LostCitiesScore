@@ -3,8 +3,6 @@ def count_colour(scoretext):
     multiplier = 1
     cardcount = len(scoretext)
 
-    print('cardcount:', cardcount)
-
     for item in scoretext:
         if item == 'd':
             multiplier += 1
@@ -18,6 +16,8 @@ def count_colour(scoretext):
 
     if cardcount >= 8:
         totalscrore += 20
+
+    print('subcount: {} - cardcount: {}'.format(totalscrore, cardcount))
 
     return totalscrore
 
