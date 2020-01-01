@@ -16,4 +16,7 @@ import LostCitiesScore.scorecounter as counter
 if __name__ == '__main__':
     scoretext = input('score: ')
 
-    print(counter.main(text=scoretext))
+    while scoretext:
+        print(counter.main(text=scoretext))
+
+        scoretext = input('score: ')
