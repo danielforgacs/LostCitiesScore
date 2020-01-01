@@ -42,8 +42,9 @@ def count_colour(scoretext):
 
 
 if __name__ == '__main__':
-    scoretexts = scoretext.split(';')
-    print(scoretexts)
+    # scoretexts = scoretext.split(';')
+    # print(scoretexts)
+    scoretexts = input('score: ')
 
     score = 0
 
