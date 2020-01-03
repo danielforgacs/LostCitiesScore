@@ -14,15 +14,6 @@ import LostCitiesScore.scorecounter as counter
 
 
 if __name__ == '__main__':
-    # rounds = ['p1-r1', 'p2-r1']
-
-    # for round_ in rounds:
-    #     print(round_)
-    #     scoretext = input('score: ')
-    #     # print(counter.main(text=scoretext))
-
-    #     # scoretext = input('score: ')
-
     p1score = 0
     p2score = 0
 
