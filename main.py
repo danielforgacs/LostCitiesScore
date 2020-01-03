@@ -14,36 +14,24 @@ import LostCitiesScore.scorecounter as counter
 
 
 if __name__ == '__main__':
-    p1score = 0
-    p2score = 0
+    player_one = 0
+    player_two = 0
 
-    print('\n--> Round 1\n')
+    rounds = range(1, 4)
 
-    scoretext = input('Player 1 cards: ')
-    p1score += counter.main(text=scoretext)
+    for rnd in rounds:
+        print()
+        print('.'*79)
+        print('Round: {}'.format(rnd))
 
-    scoretext = input('\nPlayer 2 cards: ')
-    p2score += counter.main(text=scoretext)
+        scoretext = input('\tPlayer 1 cards: ')
+        player_one += counter.main(text=scoretext)
 
-    print('.'*79)
-    print('--> Round 2\n')
+        scoretext = input('\tPlayer 2 cards: ')
+        player_two += counter.main(text=scoretext)
 
-    scoretext = input('Player 1 cards: ')
-    p1score += counter.main(text=scoretext)
-
-    scoretext = input('\nPlayer 2 cards: ')
-    p2score += counter.main(text=scoretext)
-
-    print('.'*79)
-    print('--> Round 3\n')
-
-    scoretext = input('Player 1 cards: ')
-    p1score += counter.main(text=scoretext)
-
-    scoretext = input('\nPlayer 2 cards: ')
-    p2score += counter.main(text=scoretext)
-
+    print()
     print('-'*79)
-
-    print('Player 1 score total: {}'.format(p1score))
-    print('Player 2 score total: {}'.format(p2score))
+    print('Total:')
+    print('player one total: {}'.format(player_one))
+    print('player two total: {}'.format(player_two))
