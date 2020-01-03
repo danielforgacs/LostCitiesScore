@@ -17,7 +17,7 @@ def count_colour(scoretext):
     if cardcount >= 8:
         totalscrore += 20
 
-    print('subcount: {} - cardcount: {}'.format(totalscrore, cardcount))
+    print('\tsubcount: {} - cardcount: {}'.format(totalscrore, cardcount))
 
     return totalscrore
 

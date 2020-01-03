@@ -27,6 +27,8 @@ if __name__ == '__main__':
         scoretext = input('\tPlayer 1 cards: ')
         player_one += counter.main(text=scoretext)
 
+        print()
+
         scoretext = input('\tPlayer 2 cards: ')
         player_two += counter.main(text=scoretext)
 
