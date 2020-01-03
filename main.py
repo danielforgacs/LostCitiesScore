@@ -17,13 +17,7 @@ if __name__ == '__main__':
     p1score = 0
     p2score = 0
 
-    scoretext = input('Player 1 cards: ')
-    p1score += counter.main(text=scoretext)
-
-    scoretext = input('\nPlayer 2 cards: ')
-    p2score += counter.main(text=scoretext)
-
-    print('.'*79)
+    print('\n--> Round 1\n')
 
     scoretext = input('Player 1 cards: ')
     p1score += counter.main(text=scoretext)
@@ -32,6 +26,16 @@ if __name__ == '__main__':
     p2score += counter.main(text=scoretext)
 
     print('.'*79)
+    print('--> Round 2\n')
+
+    scoretext = input('Player 1 cards: ')
+    p1score += counter.main(text=scoretext)
+
+    scoretext = input('\nPlayer 2 cards: ')
+    p2score += counter.main(text=scoretext)
+
+    print('.'*79)
+    print('--> Round 3\n')
 
     scoretext = input('Player 1 cards: ')
     p1score += counter.main(text=scoretext)
