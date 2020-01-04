@@ -13,12 +13,12 @@ import LostCitiesScore.scorecounter as counter
 
 
 
-if __name__ == '__main__':
+
+def main():
     player_one = 0
     player_two = 0
 
-    rounds = range(1, 4)
-    rounds = range(1, 2)
+    rounds = range(1, 3)
 
     for rnd in rounds:
         print()
@@ -42,3 +42,8 @@ if __name__ == '__main__':
     print('Total:')
     print('player one total: {}'.format(player_one))
     print('player two total: {}'.format(player_two))
+
+
+
+if __name__ == '__main__':
+    main()
