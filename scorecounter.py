@@ -25,7 +25,7 @@ def count_colour(scoretext):
     for item in scoretext:
         if item == 'd':
             multiplier += 1
-        elif item in ['1', 't']:
+        elif item in settings.TEN_TOKENS:
             totalscrore += 10
         else:
             totalscrore += int(item)
