@@ -18,6 +18,7 @@ if __name__ == '__main__':
     player_two = 0
 
     rounds = range(1, 4)
+    rounds = range(1, 2)
 
     for rnd in rounds:
         print()
@@ -25,12 +26,16 @@ if __name__ == '__main__':
         print('Round: {}'.format(rnd))
 
         scoretext = input('\tPlayer 1 cards: ')
-        player_one += counter.main(text=scoretext)
+        roundscore = counter.main(text=scoretext)
+        player_one += roundscore
+        print('\t   round score: {}'.format(roundscore))
 
         print()
 
         scoretext = input('\tPlayer 2 cards: ')
-        player_two += counter.main(text=scoretext)
+        roundscore = counter.main(text=scoretext)
+        player_two += roundscore
+        print('\t   round score: {}'.format(roundscore))
 
     print()
     print('-'*79)
