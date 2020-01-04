@@ -18,7 +18,7 @@ def main():
     player_one = 0
     player_two = 0
 
-    rounds = range(1, 3)
+    rounds = range(1, 4)
 
     for rnd in rounds:
         print()
