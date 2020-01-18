@@ -29,6 +29,7 @@ def main():
         roundscore = counter.main(text=scoretext)
         player_one += roundscore
         print('\t   round score: {}'.format(roundscore))
+        print('\t   total score: {}'.format(player_one))
 
         print()
 
@@ -36,6 +37,7 @@ def main():
         roundscore = counter.main(text=scoretext)
         player_two += roundscore
         print('\t   round score: {}'.format(roundscore))
+        print('\t   total score: {}'.format(player_two))
 
     print()
     print('-'*79)
