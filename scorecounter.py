@@ -1,3 +1,22 @@
+import os
+import sys
+import pytest
+
+ROOTDIR = (
+    os.path.dirname(
+    os.path.dirname(
+        os.path.abspath(__file__)
+)))
+
+sys.path = [ROOTDIR] + sys.path
+
+import LostCitiesScore.settings as settings
+
+
+
+
+
+
 def count_colour(scoretext):
     totalscrore = -20
     multiplier = 1
@@ -6,11 +25,10 @@ def count_colour(scoretext):
     for item in scoretext:
         if item == 'd':
             multiplier += 1
-        elif item in ['1', 't']:
+        elif item in settings.TEN_TOKENS:
             totalscrore += 10
         else:
             totalscrore += int(item)
-
 
     totalscrore *= multiplier
 
@@ -24,7 +42,7 @@ def count_colour(scoretext):
 
 
 def main(text):
-    scoretexts = text.split(';')
+    scoretexts = text.split(settings.COLOUR_SEPARATOR)
 
     score = 0
 
