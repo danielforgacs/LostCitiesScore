@@ -39,6 +39,8 @@ def main():
         print('\t   round score: {}'.format(roundscore))
         print('\t   total score: {}'.format(player_two))
 
+        print('\tscore diff: {}'.format(abs(player_two-player_one)))
+
     print()
     print('-'*79)
     print('Total:')
