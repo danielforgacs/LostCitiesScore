@@ -10,7 +10,7 @@ ROOTDIR = (
 
 sys.path = [ROOTDIR] + sys.path
 
-import LostCitiesScore.scorecounter as counter
+import lostcitiesscore.scorecounter as counter
 
 
 SCORE_TEXTS = [

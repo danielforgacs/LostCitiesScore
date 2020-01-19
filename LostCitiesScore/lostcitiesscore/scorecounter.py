@@ -9,7 +9,7 @@ ROOTDIR = (
 
 sys.path = [ROOTDIR] + sys.path
 
-import LostCitiesScore.settings as settings
+import lostcitiesscore.settings as settings
 
 
 
