@@ -16,7 +16,7 @@ import lostcitiesscore.settings as settings
 
 
 # VALID_SCORES = r'(d{0,3})([2]{0,1}[3]{0,1})'
-VALID_SCORES = r'.*'
+VALID_SCORES = r'd{0,3}2{0,1}'
 
 
 
@@ -28,6 +28,7 @@ def is_valid_score(txt):
     patmatch = lambda x: bool(re.fullmatch(VALID_SCORES, x))
     matchit = map(patmatch, txt.split(' '))
     is_valid = all(matchit)
+
 
     if not txt:
         is_valid = False
