@@ -61,13 +61,18 @@ COLOUR_TEXTS = [
 SCORE_TEXTS_VALIDATION = [
     ('', False),
     ('dddd', False),
+    ('22', False),
+    ('d22', False),
 
     ('d', True),
     ('dd', True),
     ('ddd', True),
-
     ('2', True),
-    ('22', False),
+    ('d2', True),
+
+    ('3', True),
+    ('33', False),
+
 ]
 
 
