@@ -59,7 +59,39 @@ COLOUR_TEXTS = [
 ]
 
 SCORE_TEXTS_VALIDATION = [
-    ('', False),
+    ('d', True),
+    # ('dd', True),
+    # ('ddd', True),
+    # ('2', True),
+    # ('23', True),
+    # ('23t', True),
+    # ('d2', True),
+    # ('d23', True),
+    # ('d23t', True),
+    # ('dd2', True),
+    # ('dd23', True),
+    # ('dd23t', True),
+
+    # ('d d', True),
+    # ('dd dd', True),
+    # ('ddd ddd', True),
+    # ('2 2', True),
+    # ('23 23', True),
+    # ('23t 23t', True),
+    # ('d2 d2', True),
+    # ('d23 d23', True),
+    # ('d23t d23t', True),
+    # ('dd2 dd2', True),
+    # ('dd23 dd23', True),
+    # ('dd23t dd23t', True),
+
+
+
+    # ('', False),
+    # ('1', True),
+
+    # ('2', True),
+    # ('22', False),
 ]
 
 
