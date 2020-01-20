@@ -58,6 +58,10 @@ COLOUR_TEXTS = [
     ['ddd2345', ((-20+2+3+4+5)*4)],
 ]
 
+SCORE_TEXTS_VALIDATION = [
+    ('', False),
+]
+
 
 @pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
 def test_score_counter(txt, expected):
@@ -67,3 +71,10 @@ def test_score_counter(txt, expected):
 @pytest.mark.parametrize('txt, expected', COLOUR_TEXTS)
 def test_count_colour(txt, expected):
     assert counter.count_colour(scoretext=txt) == expected
+
+
+
+@pytest.mark.parametrize('text, expected', SCORE_TEXTS_VALIDATION)
+def test_score_text_validator(text, expected):
+    assert counter.is_valid_score(txt=text) == expected
+

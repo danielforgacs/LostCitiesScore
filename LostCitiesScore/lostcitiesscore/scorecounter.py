@@ -16,6 +16,18 @@ import lostcitiesscore.settings as settings
 
 
 
+def is_valid_score(txt):
+    is_valid = True
+
+    if not txt:
+        is_valid = False
+
+    return is_valid
+
+
+
+
+
 def count_colour(scoretext):
     totalscrore = -20
     multiplier = 1
