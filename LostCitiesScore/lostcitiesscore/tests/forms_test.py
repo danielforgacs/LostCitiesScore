@@ -23,3 +23,19 @@ def test_accepts_player_round_data():
     form = forms.IndexForm(data=data)
 
     assert form.is_bound
+
+
+
+def test_form_has_fields():
+    fields = (
+        'cards_A_round_1',
+        'cards_B_round_1',
+        'cards_A_round_2',
+        'cards_B_round_2',
+        'cards_A_round_3',
+        'cards_B_round_3',
+    )
+    form = forms.IndexForm()
+
+    assert tuple(form.fields.keys()) == fields
+
