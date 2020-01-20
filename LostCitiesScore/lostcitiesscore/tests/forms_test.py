@@ -39,3 +39,26 @@ def test_form_has_fields():
 
     assert tuple(form.fields.keys()) == fields
 
+
+
+
+def test_form_validation():
+    data = {
+        'p1r1': 'a',
+        'p2r1': 'a',
+        'p1r2': 'a',
+        'p2r2': 'a',
+        'p1r3': 'a',
+        'p2r3': 'a',
+    }
+    form = forms.IndexForm(data=data)
+
+    assert not form.is_valid()
+
+    print(form.is_valid())
+    print(form.is_valid())
+    print(form.is_valid())
+    print(form.is_valid())
+    print(form.is_valid())
+
+    # assert not form.is_valid
