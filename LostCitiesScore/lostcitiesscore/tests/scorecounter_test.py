@@ -59,7 +59,11 @@ COLOUR_TEXTS = [
 ]
 
 SCORE_TEXTS_VALIDATION = [
+    ('', False),
     ('d', True),
+    ('dd', True),
+    ('ddd', True),
+    ('dddd', False),
     # ('dd', True),
     # ('ddd', True),
     # ('2', True),
