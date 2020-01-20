@@ -17,7 +17,8 @@ import lostcitiesscore.settings as settings
 
 # VALID_SCORES = r'[dt123456789]+'
 # VALID_SCORES = r'[d\*t123456789 ]{1,5}'
-VALID_SCORES = r'd{1,3}'
+# VALID_SCORES = r'(d{0,3})([2])'
+VALID_SCORES = r'(d{0,3})([2]{0,1})'
 
 
 
@@ -31,10 +32,8 @@ def is_valid_score(txt):
     if check:
         is_valid = True
 
-    # if not txt:
-    #     is_valid = False
-
-
+    if not txt:
+        is_valid = False
 
     return is_valid
 

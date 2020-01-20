@@ -64,6 +64,8 @@ SCORE_TEXTS_VALIDATION = [
     ('dd', True),
     ('ddd', True),
     ('dddd', False),
+
+    ('2', True),
     # ('dd', True),
     # ('ddd', True),
     # ('2', True),
