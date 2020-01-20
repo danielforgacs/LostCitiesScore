@@ -15,8 +15,7 @@ import lostcitiesscore.settings as settings
 
 
 
-# VALID_SCORES = r'(d{0,3})([2]{0,1}[3]{0,1})'
-VALID_SCORES = r'd{0,3}2{0,1}3{0,1}'
+VALID_SCORES = r'd{0,3}2{0,1}3{0,1}4{0,1}5{0,1}6{0,1}7{0,1}8{0,1}9{0,1}t{0,1}'
 
 
 

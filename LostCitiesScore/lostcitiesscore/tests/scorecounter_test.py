@@ -73,6 +73,14 @@ SCORE_TEXTS_VALIDATION = [
     ('3', True),
     ('33', False),
 
+    ('35', True),
+
+    ('353', False),
+
+    ('d23456789', True),
+
+    ('d23456789t d23456789t d23456789t ', True),
+
 ]
 
 
