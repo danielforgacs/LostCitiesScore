@@ -15,10 +15,7 @@ import lostcitiesscore.settings as settings
 
 
 
-# VALID_SCORES = r'[dt123456789]+'
-# VALID_SCORES = r'[d\*t123456789 ]{1,5}'
-# VALID_SCORES = r'(d{0,3})([2])'
-VALID_SCORES = r'(d{0,3})([2]{0,1})'
+VALID_SCORES = r'(d{0,3})([2]{0,1}[3]{0,1})'
 
 
 
