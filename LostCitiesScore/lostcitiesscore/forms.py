@@ -29,7 +29,7 @@ def validator(*args, **kwargs):
 #     params={'value': '42'},
 # )
 
-    raise ValidationError("A valid school email must be entered in")
+    raise ValidationError("careful with the scores...")
     # return False
 
 

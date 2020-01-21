@@ -1,5 +1,19 @@
+import pytest
 from django.forms import Form
 from lostcitiesscore import forms
+
+
+
+TEST_SCORES = [
+    ({
+        'cards_A_round_1': 'dd23',
+        'cards_B_round_1': 'dd23',
+        'cards_A_round_2': 'dd23',
+        'cards_B_round_2': 'dd23',
+        'cards_A_round_3': 'dd23',
+        'cards_B_round_3': 'dd23',
+    }, True),
+]
 
 
 
@@ -42,23 +56,19 @@ def test_form_has_fields():
 
 
 
-def test_form_validation():
-    data = {
-        'p1r1': 'a',
-        'p2r1': 'a',
-        'p1r2': 'a',
-        'p2r2': 'a',
-        'p1r3': 'a',
-        'p2r3': 'a',
-    }
-    form = forms.IndexForm(data=data)
+@pytest.mark.parametrize('data, expected', TEST_SCORES)
+def test_form_validation(data, expected):
+    form = forms.IndexForm(data={
+        'cards_A_round_1': '2',
+        'cards_B_round_1': '2',
+        'cards_A_round_2': '2',
+        'cards_B_round_2': '2',
+        'cards_A_round_3': '2',
+        'cards_B_round_3': '2',
+    })
 
-    assert not form.is_valid()
+    # print(form.fields.keys())
+    # print(help(form))
+    print(form.errors)
 
-    print(form.is_valid())
-    print(form.is_valid())
-    print(form.is_valid())
-    print(form.is_valid())
-    print(form.is_valid())
-
-    # assert not form.is_valid
+    assert form.is_valid() == expected
