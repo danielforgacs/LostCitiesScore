@@ -13,6 +13,15 @@ TEST_SCORES = [
         'cards_A_round_3': 'dd23',
         'cards_B_round_3': 'dd23',
     }, True),
+
+    ({
+        'cards_A_round_1': 'dd23',
+        'cards_B_round_1': 'dd23x',
+        'cards_A_round_2': 'dd23',
+        'cards_B_round_2': 'dd23',
+        'cards_A_round_3': 'dd23',
+        'cards_B_round_3': 'dd23',
+    }, False),
 ]
 
 
@@ -58,17 +67,18 @@ def test_form_has_fields():
 
 @pytest.mark.parametrize('data, expected', TEST_SCORES)
 def test_form_validation(data, expected):
-    form = forms.IndexForm(data={
-        'cards_A_round_1': '2',
-        'cards_B_round_1': '2',
-        'cards_A_round_2': '2',
-        'cards_B_round_2': '2',
-        'cards_A_round_3': '2',
-        'cards_B_round_3': '2',
-    })
+    form = forms.IndexForm(data=data)
+    # form = forms.IndexForm(data={
+    #     'cards_A_round_1': '2',
+    #     'cards_B_round_1': '2',
+    #     'cards_A_round_2': '2',
+    #     'cards_B_round_2': '2',
+    #     'cards_A_round_3': '2',
+    #     'cards_B_round_3': '2',
+    # })
 
-    # print(form.fields.keys())
-    # print(help(form))
-    print(form.errors)
+    # # print(form.fields.keys())
+    # # print(help(form))
+    # print(form.errors)
 
     assert form.is_valid() == expected

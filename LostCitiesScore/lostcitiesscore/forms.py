@@ -1,25 +1,33 @@
 from django import forms
-
-
-######################################~
 from django.core.exceptions import ValidationError
+from . import scorecounter
 
-def validate_school_email(value):
-    if not ".edu" in value:
-        raise ValidationError("A valid school email must be entered in")
-    else:
-        return value
+
+######################################~
+
+# def validate_school_email(value):
+#     if not ".edu" in value:
+#         raise ValidationError("A valid school email must be entered in")
+#     else:
+#         return value
 
 ######################################~
 
 
 
-def validator(*args, **kwargs):
+def validator(value):
     print('---VALIDATOR---')
-    print(args)
-    print(kwargs)
+    # print(args)
+    # print(kwargs)
+    print(value)
+    print(value)
+    print(value)
     print('---VALIDATOR END---')
 
+    if not scorecounter.is_valid_score(txt=value):
+        raise ValidationError("careful with the scores...")
+
+    return value
 
 # ValidationError(_('Invalid value'), code='invalid')
 
@@ -29,7 +37,6 @@ def validator(*args, **kwargs):
 #     params={'value': '42'},
 # )
 
-    raise ValidationError("careful with the scores...")
     # return False
 
 
@@ -40,13 +47,13 @@ class IndexForm(forms.Form):
     simple form with both player all rounds.
     """
     cards_A_round_1 = forms.CharField(validators=[validator])
-    cards_B_round_1 = forms.CharField()
+    cards_B_round_1 = forms.CharField(validators=[validator])
 
-    cards_A_round_2 = forms.CharField()
-    cards_B_round_2 = forms.CharField()
+    cards_A_round_2 = forms.CharField(validators=[validator])
+    cards_B_round_2 = forms.CharField(validators=[validator])
 
-    cards_A_round_3 = forms.CharField()
-    cards_B_round_3 = forms.CharField()
+    cards_A_round_3 = forms.CharField(validators=[validator])
+    cards_B_round_3 = forms.CharField(validators=[validator])
 
 
 
