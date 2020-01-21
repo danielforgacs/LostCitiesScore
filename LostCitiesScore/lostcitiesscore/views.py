@@ -4,9 +4,9 @@ from . import forms
 def index(request):
     form = forms.IndexForm(data=request.POST.dict() or None)
 
-    if request.method == 'POST':
-        if form.is_valid:
-            print('YAAAAAAY')
+    # if request.method == 'POST':
+    if form.is_valid():
+        print('YAAAAAAY')
 
     result = render(
         request=request,

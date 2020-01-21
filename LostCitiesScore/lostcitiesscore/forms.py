@@ -16,13 +16,13 @@ from . import scorecounter
 
 
 def validator(value):
-    print('---VALIDATOR---')
-    # print(args)
-    # print(kwargs)
-    print(value)
-    print(value)
-    print(value)
-    print('---VALIDATOR END---')
+    # print('---VALIDATOR---')
+    # # print(args)
+    # # print(kwargs)
+    # print(value)
+    # print(value)
+    # print(value)
+    # print('---VALIDATOR END---')
 
     if not scorecounter.is_valid_score(txt=value):
         raise ValidationError("careful with the scores...")
