@@ -3,14 +3,21 @@ from . import forms
 
 def index(request):
     form = forms.IndexForm(data=request.POST.dict() or None)
+    template = 'lostcitiesscore/index.html'
+    scores = None
+    context = {
+        'form': form,
+        'scores': scores,
+    }
 
-    # if request.method == 'POST':
     if form.is_valid():
-        print('YAAAAAAY')
+        player_1_round_1 = form.data
+        print(player_1_round_1)
+        template = 'lostcitiesscore/scores.html'
 
     result = render(
         request=request,
-        template_name='lostcitiesscore/index.html',
-        context={'form': form})
+        template_name=template,
+        context=context)
 
     return result
