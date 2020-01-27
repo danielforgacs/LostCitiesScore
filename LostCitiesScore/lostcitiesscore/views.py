@@ -20,6 +20,13 @@ def index(request):
         pl1rnd3 = form.data['cards_A_round_3']
         pl2rnd3 = form.data['cards_B_round_3']
 
+        pl1rnd1 = '28t'
+        pl2rnd1 = '37t'
+        pl1rnd2 = '28t 37t'
+        pl2rnd2 = 'd'
+        pl1rnd3 = 'ddd 2 3 4 5'
+        pl2rnd3 = 'ddd23456789t'
+
         context['data'] = [
             [
                 {

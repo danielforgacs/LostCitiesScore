@@ -9,7 +9,9 @@
 	round: {{ forloop.counter }}</br>
 
 	{% for player in round %}
-		player: {{ player }}</br>
+		...player: {{ forloop.counter }}</br>
+		...player cards: {{ player.cards }}</br>
+		</br>
 	{% endfor %}
 	</br>
 {% endfor %}
