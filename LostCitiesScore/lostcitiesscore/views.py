@@ -21,37 +21,37 @@ def index(request):
         pl2rnd3 = form.data['cards_B_round_3']
 
         context['data'] = [
-            {
-                1: {
+            [
+                {
                     'cards': pl1rnd1,
                 },
 
-                2: {
+                {
                     'cards': pl2rnd1,
                 },
-            },
+            ],
 
 
-            {
-                1: {
-                    'cards': pl1rnd1,
+            [
+                {
+                    'cards': pl1rnd2,
                 },
 
-                2: {
-                    'cards': pl2rnd1,
+                {
+                    'cards': pl2rnd2,
                 },
-            },
+            ],
 
 
-            {
-                1: {
-                    'cards': pl1rnd1,
+            [
+                {
+                    'cards': pl1rnd3,
                 },
 
-                2: {
-                    'cards': pl2rnd1,
+                {
+                    'cards': pl2rnd3,
                 },
-            },
+            ],
         ]
 
 
