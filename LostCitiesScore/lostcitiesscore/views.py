@@ -31,10 +31,12 @@ def index(request):
             [
                 {
                     'cards': pl1rnd1,
+                    'subcounts': [score for score in pl1rnd1.split()],
                 },
 
                 {
                     'cards': pl2rnd1,
+                    'subcounts': [score for score in pl2rnd1.split()],
                 },
             ],
 
@@ -42,10 +44,12 @@ def index(request):
             [
                 {
                     'cards': pl1rnd2,
+                    'subcounts': [score for score in pl1rnd2.split()],
                 },
 
                 {
                     'cards': pl2rnd2,
+                    'subcounts': [score for score in pl2rnd2.split()],
                 },
             ],
 
@@ -53,10 +57,12 @@ def index(request):
             [
                 {
                     'cards': pl1rnd3,
+                    'subcounts': [score for score in pl1rnd3.split()],
                 },
 
                 {
                     'cards': pl2rnd3,
+                    'subcounts': [score for score in pl2rnd3.split()],
                 },
             ],
         ]

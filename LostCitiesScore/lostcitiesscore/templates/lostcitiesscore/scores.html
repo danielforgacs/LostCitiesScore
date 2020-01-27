@@ -12,6 +12,10 @@
 		...player: {{ forloop.counter }}</br>
 		...player cards: {{ player.cards }}</br>
 		</br>
+		{% for subc in player.subcounts %}
+			... ... ...subcount: {{ subc }}</br>
+		{% endfor %}
+		</br>
 	{% endfor %}
 	</br>
 {% endfor %}
