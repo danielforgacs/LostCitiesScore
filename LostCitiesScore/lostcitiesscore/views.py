@@ -20,8 +20,8 @@ def index(request):
         pl1rnd3 = form.data['cards_A_round_3']
         pl2rnd3 = form.data['cards_B_round_3']
 
-        context['data'] = {
-            1: {
+        context['data'] = [
+            {
                 1: {
                     'cards': pl1rnd1,
                 },
@@ -32,7 +32,7 @@ def index(request):
             },
 
 
-            2: {
+            {
                 1: {
                     'cards': pl1rnd1,
                 },
@@ -43,7 +43,7 @@ def index(request):
             },
 
 
-            3: {
+            {
                 1: {
                     'cards': pl1rnd1,
                 },
@@ -52,7 +52,7 @@ def index(request):
                     'cards': pl2rnd1,
                 },
             },
-        }
+        ]
 
 
         context['scores'] = [

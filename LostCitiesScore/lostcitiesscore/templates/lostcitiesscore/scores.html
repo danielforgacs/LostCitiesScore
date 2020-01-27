@@ -1,11 +1,17 @@
-{{ data }}
+{{ data }}</br>
+{{ data.1 }}</br>
 
 </br>
 </br>
 </br>
 
 {% for round in data %}
-	{{ round }}
+	round: {{ round }}</br>
+
+	{% for player in round %}
+		player: {{ player }}</br>
+	{% endfor %}
+	</br>
 {% endfor %}
 
 
