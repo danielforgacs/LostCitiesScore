@@ -6,7 +6,7 @@
 </br>
 
 {% for round in data %}
-	round: {{ round }}</br>
+	round: {{ forloop.counter }}</br>
 
 	{% for player in round %}
 		player: {{ player }}</br>
