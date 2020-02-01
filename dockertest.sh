@@ -1,1 +1,1 @@
-docker run --rm -v $PWD:/home -e DEBUG=1 -p 8000:8000 lostcitiesscore pytest LostCitiesScore/
+docker run --rm -v $PWD:/home -e DEBUG=1 --network="host" lostcitiesscore pytest LostCitiesScore/
