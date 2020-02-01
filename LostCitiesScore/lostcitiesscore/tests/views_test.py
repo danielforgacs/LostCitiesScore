@@ -1,3 +1,4 @@
+import requests
 from lostcitiesscore import views
 from django.http import HttpRequest
 from django.http import QueryDict
@@ -10,3 +11,11 @@ def test_alkwsjhf():
 
 
     print(dir(request))
+
+
+
+
+
+
+def test_req():
+    response = requests.get('http://localhost:8000')
