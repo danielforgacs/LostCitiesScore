@@ -1,3 +1,5 @@
 *.py[co]
 secrets.py
 *sqlite*
+
+**/.venv/
