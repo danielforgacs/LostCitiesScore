@@ -95,3 +95,9 @@ def test_valuedescriptor_errors_on_bad_value(badvalue):
     with pytest.raises(ValueError):
         instance.attr = badvalue
 
+
+
+
+def test_Card_has_value():
+    card = counter.Card(value=2)
+    assert hasattr(card, 'value')

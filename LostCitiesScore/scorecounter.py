@@ -23,6 +23,13 @@ class ValueDescriptor:
         return obj.__dict__['value']
 
 
+class Card:
+    value = ValueDescriptor()
+
+    def __init__(self, value):
+        self.value = value
+
+
 
 
 
