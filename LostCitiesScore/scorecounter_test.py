@@ -67,3 +67,31 @@ def test_score_counter(txt, expected):
 @pytest.mark.parametrize('txt, expected', COLOUR_TEXTS)
 def test_count_colour(txt, expected):
     assert counter.count_colour(scoretext=txt) == expected
+
+
+
+
+@pytest.mark.parametrize('goodvalue', (
+    2, 3, 4, 5, 6, 7, 8, 9, 10
+))
+def test_valuedescriptor_init(goodvalue):
+    class TestClass:
+        attr = counter.ValueDescriptor()
+
+    instance = TestClass()
+    instance.attr = goodvalue
+
+
+
+@pytest.mark.parametrize('badvalue', (
+    1, 11, '1', [1, 2], 1.23,
+))
+def test_valuedescriptor_errors_on_bad_value(badvalue):
+    class TestClass:
+        attr = counter.ValueDescriptor()
+
+    instance = TestClass()
+
+    with pytest.raises(ValueError):
+        instance.attr = badvalue
+
