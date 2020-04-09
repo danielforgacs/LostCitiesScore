@@ -84,6 +84,13 @@ def test_score_counter(txt, expected):
 
 
 
+
+@pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
+def test_score_counter(txt, expected):
+    assert counter.PlayerRows(text=txt).value == expected
+
+
+
 @pytest.mark.parametrize('goodvalue', (
     2, 3, 4, 5, 6, 7, 8, 9, 10
 ))

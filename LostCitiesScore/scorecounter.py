@@ -59,6 +59,28 @@ class ColourRow:
 
 
 
+class PlayerRows:
+    def __init__(self, text):
+        self.text = text
+
+
+    @property
+    def value(self):
+        scoretexts = self.text.split(settings.COLOUR_SEPARATOR)
+        score = 0
+
+        for txt in scoretexts:
+            subscore = ColourRow(scoretext=txt).value
+            print('\t\tsubcount: {} - cardcount: {}'.format(subscore, len(txt)))
+            score += subscore
+
+        return score
+
+
+
+
+
+
 def main(text):
     scoretexts = text.split(settings.COLOUR_SEPARATOR)
 
