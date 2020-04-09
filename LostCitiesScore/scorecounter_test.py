@@ -78,12 +78,6 @@ COLOUR_TEXTS = [
 ]
 
 
-@pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
-def test_score_counter(txt, expected):
-    assert counter.main(text=txt) == expected
-
-
-
 
 @pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
 def test_PlayerRows(txt, expected):

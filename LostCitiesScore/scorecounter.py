@@ -80,24 +80,5 @@ class PlayerRows:
 
 
 
-
-def main(text):
-    scoretexts = text.split(settings.COLOUR_SEPARATOR)
-
-    score = 0
-
-    for txt in scoretexts:
-        subscore = ColourRow(scoretext=txt).value
-        print('\t\tsubcount: {} - cardcount: {}'.format(subscore, len(txt)))
-        score += subscore
-
-    return score
-
-
-
-
-
-
-
 if __name__ == '__main__':
     pass
