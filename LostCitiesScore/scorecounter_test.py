@@ -143,7 +143,15 @@ def test_PlayerRows_errors_on_bad_values(playertext):
 
 @pytest.mark.parametrize('playertext', BAD_PLAYER_ROWS)
 def test_bad_player_row_wrong_chars_detect(playertext):
-    is_wrongchars = any(map(lambda x: x not in 'd23456789t ', str(playertext)))
+    """
+    Double check case: integer 1
+    """
+    if playertext == 1:
+        assert True
+
+        return
+
+    is_wrongchars = any(map(lambda x: x not in counter.settings.VALID_CHARS, str(playertext)))
     is_wrongchars = is_wrongchars if playertext else True
 
     assert is_wrongchars

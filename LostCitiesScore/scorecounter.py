@@ -63,7 +63,7 @@ class PlayerRows:
     def __init__(self, text):
         not_text = not bool(text)
         not_string = not isinstance(text, str)
-        is_wrongchars = any(map(lambda x: x not in 'd23456789t1 ', str(text)))
+        is_wrongchars = any(map(lambda x: x not in settings.VALID_CHARS, str(text)))
 
         if not_text or not_string or is_wrongchars:
             raise ValueError('BAD PLAYER TEXT')
