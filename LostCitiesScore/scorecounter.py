@@ -23,6 +23,12 @@ class Card:
 
 
 
+class Row:
+    def __init__(self, scoretext):
+        pass
+
+
+
 
 def count_colour(scoretext):
     multiplier = 1
