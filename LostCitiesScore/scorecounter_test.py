@@ -74,11 +74,8 @@ def test_count_colour(txt, expected):
 @pytest.mark.parametrize('goodvalue', (
     2, 3, 4, 5, 6, 7, 8, 9, 10
 ))
-def test_valuedescriptor_init(goodvalue):
-    class TestClass:
-        attr = counter.ValueDescriptor()
-
-    instance = TestClass()
+def test_Card_init(goodvalue):
+    instance = counter.Card(value=goodvalue)
     instance.attr = goodvalue
 
 
@@ -86,14 +83,10 @@ def test_valuedescriptor_init(goodvalue):
 @pytest.mark.parametrize('badvalue', (
     1, 11, '1', [1, 2], 1.23,
 ))
-def test_valuedescriptor_errors_on_bad_value(badvalue):
-    class TestClass:
-        attr = counter.ValueDescriptor()
-
-    instance = TestClass()
+def test_Card_errors_on_bad_value(badvalue):
 
     with pytest.raises(ValueError):
-        instance.attr = badvalue
+        instance = counter.Card(value=badvalue)
 
 
 

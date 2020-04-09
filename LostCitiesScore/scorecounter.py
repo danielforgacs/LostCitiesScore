@@ -13,28 +13,10 @@ import LostCitiesScore.settings as settings
 
 
 
-class ValueDescriptor:
-    def __set__(self, obj, value):
-        if not value in range(2, 11):
-            raise ValueError('BAD CARD VALUE')
-        obj.__dict__['value'] = value
-
-    def __get__(self, obj, objtype):
-        return obj.__dict__['value']
-
-
-class Card_OLD:
-    value = ValueDescriptor()
-
-    def __init__(self, value):
-        self.value = value
-
-
-
 
 class Card:
     def __init__(self, value):
-        if not value in range(2, 11):
+        if value not in range(2, 11):
             raise ValueError('BAD CARD VALUE')
         self.value = value
 
@@ -69,28 +51,6 @@ def count_colour(scoretext):
     return totalscrore
 
 
-
-
-
-def count_colour_OLD(scoretext):
-    totalscrore = -20
-    multiplier = 1
-    cardcount = len(scoretext)
-
-    for item in scoretext:
-        if item == 'd':
-            multiplier += 1
-        elif item in settings.TEN_TOKENS:
-            totalscrore += 10
-        else:
-            totalscrore += int(item)
-
-    totalscrore *= multiplier
-
-    if cardcount >= 8:
-        totalscrore += 20
-
-    return totalscrore
 
 
 
