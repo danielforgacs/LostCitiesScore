@@ -86,7 +86,7 @@ def test_score_counter(txt, expected):
 
 
 @pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
-def test_score_counter(txt, expected):
+def test_PlayerRows(txt, expected):
     assert counter.PlayerRows(text=txt).value == expected
 
 
