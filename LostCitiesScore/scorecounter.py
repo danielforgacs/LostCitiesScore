@@ -23,10 +23,19 @@ class ValueDescriptor:
         return obj.__dict__['value']
 
 
-class Card:
+class Card_OLD:
     value = ValueDescriptor()
 
     def __init__(self, value):
+        self.value = value
+
+
+
+
+class Card:
+    def __init__(self, value):
+        if not value in range(2, 11):
+            raise ValueError('BAD CARD VALUE')
         self.value = value
 
 
