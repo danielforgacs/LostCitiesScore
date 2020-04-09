@@ -31,14 +31,39 @@ class Card:
 
 
 
-class Multiplier:
-    pass
-
-
-
 
 
 def count_colour(scoretext):
+    multiplier = 1
+    cardcount = len(scoretext)
+    cards = []
+
+    for item in scoretext:
+        if item == 'd':
+            card = None
+            multiplier += 1
+        elif item in settings.TEN_TOKENS:
+            card = Card(value=10)
+        else:
+            card = Card(value=int(item))
+
+        cards.append(card)
+
+    cards = filter(bool, cards)
+    totalscrore = sum(map(lambda x: x.value, cards))
+    totalscrore -= 20
+    totalscrore *= multiplier
+
+    if cardcount >= 8:
+        totalscrore += 20
+
+    return totalscrore
+
+
+
+
+
+def count_colour_OLD(scoretext):
     totalscrore = -20
     multiplier = 1
     cardcount = len(scoretext)
@@ -56,8 +81,6 @@ def count_colour(scoretext):
     if cardcount >= 8:
         totalscrore += 20
 
-    print('\t\tsubcount: {} - cardcount: {}'.format(totalscrore, cardcount))
-
     return totalscrore
 
 
@@ -68,7 +91,9 @@ def main(text):
     score = 0
 
     for txt in scoretexts:
-        score += count_colour(scoretext=txt)
+        subscore = count_colour(scoretext=txt)
+        print('\t\tsubcount: {} - cardcount: {}'.format(subscore, len(txt)))
+        score += subscore
 
     return score
 
