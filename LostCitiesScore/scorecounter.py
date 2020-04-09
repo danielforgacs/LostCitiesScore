@@ -31,6 +31,11 @@ class Card:
 
 
 
+class Doubler:
+    pass
+
+
+
 
 
 def count_colour(scoretext):
