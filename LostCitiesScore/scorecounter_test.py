@@ -64,12 +64,6 @@ def test_score_counter(txt, expected):
     assert counter.main(text=txt) == expected
 
 
-@pytest.mark.parametrize('txt, expected', COLOUR_TEXTS)
-def test_count_colour(txt, expected):
-    assert counter.count_colour(scoretext=txt) == expected
-
-
-
 
 @pytest.mark.parametrize('goodvalue', (
     2, 3, 4, 5, 6, 7, 8, 9, 10
