@@ -114,6 +114,6 @@ def test_Card_has_value():
 @pytest.mark.parametrize('rowdata', COLOUR_TEXTS)
 def test_Row_has_proper_value(rowdata):
     rowtxt, expected = rowdata
-    row = counter.Row(scoretext=rowtxt)
+    row = counter.ColourRow(scoretext=rowtxt)
 
     assert row.value == expected

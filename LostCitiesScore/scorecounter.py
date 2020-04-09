@@ -23,7 +23,7 @@ class Card:
 
 
 
-class Row:
+class ColourRow:
     def __init__(self, scoretext):
         self.scoretext = scoretext
 
@@ -65,7 +65,7 @@ def main(text):
     score = 0
 
     for txt in scoretexts:
-        subscore = Row(scoretext=txt).value
+        subscore = ColourRow(scoretext=txt).value
         print('\t\tsubcount: {} - cardcount: {}'.format(subscore, len(txt)))
         score += subscore
 
