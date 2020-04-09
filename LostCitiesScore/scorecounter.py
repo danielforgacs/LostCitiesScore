@@ -31,7 +31,7 @@ class Card:
 
 
 
-class Doubler:
+class Multiplier:
     pass
 
 
