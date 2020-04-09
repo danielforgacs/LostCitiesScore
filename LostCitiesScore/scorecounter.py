@@ -13,6 +13,16 @@ import LostCitiesScore.settings as settings
 
 
 
+class ValueDescriptor:
+    def __set__(self, obj, value):
+        if not value in range(2, 11):
+            raise ValueError('BAD CARD VALUE')
+        obj.__dict__['value'] = value
+
+    def __get__(self, obj, objtype):
+        return obj.__dict__['value']
+
+
 
 
 
