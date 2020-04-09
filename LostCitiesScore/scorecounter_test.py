@@ -94,3 +94,11 @@ def test_Card_errors_on_bad_value(badvalue):
 def test_Card_has_value():
     card = counter.Card(value=2)
     assert hasattr(card, 'value')
+
+
+
+
+@pytest.mark.parametrize('rowdata', COLOUR_TEXTS)
+def test_Row_has_proper_value(rowdata):
+    rowtxt, expected = rowdata
+    row = counter.Row(scoretext=rowtxt)
