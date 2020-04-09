@@ -102,3 +102,5 @@ def test_Card_has_value():
 def test_Row_has_proper_value(rowdata):
     rowtxt, expected = rowdata
     row = counter.Row(scoretext=rowtxt)
+
+    assert row.value == expected

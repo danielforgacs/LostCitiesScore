@@ -25,7 +25,34 @@ class Card:
 
 class Row:
     def __init__(self, scoretext):
-        pass
+        self.scoretext = scoretext
+
+    @property
+    def value(self):
+        multiplier = 1
+        cardcount = len(self.scoretext)
+        cards = []
+
+        for item in self.scoretext:
+            if item == 'd':
+                card = None
+                multiplier += 1
+            elif item in settings.TEN_TOKENS:
+                card = Card(value=10)
+            else:
+                card = Card(value=int(item))
+
+            cards.append(card)
+
+        cards = filter(bool, cards)
+        totalscrore = sum(map(lambda x: x.value, cards))
+        totalscrore -= 20
+        totalscrore *= multiplier
+
+        if cardcount >= 8:
+            totalscrore += 20
+
+        return totalscrore
 
 
 
