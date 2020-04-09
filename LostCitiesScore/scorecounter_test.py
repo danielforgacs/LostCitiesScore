@@ -78,6 +78,11 @@ COLOUR_TEXTS = [
 ]
 
 
+BAD_PLAYER_ROWS = [
+    '',
+]
+
+
 
 @pytest.mark.parametrize('txt, expected', SCORE_TEXTS)
 def test_PlayerRows(txt, expected):
@@ -118,3 +123,11 @@ def test_Row_has_proper_value(rowdata):
     row = counter.ColourRow(scoretext=rowtxt)
 
     assert row.value == expected
+
+
+
+
+@pytest.mark.parametrize('playertext', BAD_PLAYER_ROWS)
+def test_PlayerRows_errors_on_bad_values(playertext):
+    with pytest.raises(ValueError):
+        playerrow = counter.PlayerRows(text=playertext)
