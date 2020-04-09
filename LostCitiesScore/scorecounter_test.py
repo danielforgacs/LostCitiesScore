@@ -80,6 +80,13 @@ COLOUR_TEXTS = [
 
 BAD_PLAYER_ROWS = [
     '',
+    's',
+    1,
+    1.23,
+    [1, 2, 3],
+    10,
+    '0',
+    'd230',
 ]
 
 
@@ -131,3 +138,12 @@ def test_Row_has_proper_value(rowdata):
 def test_PlayerRows_errors_on_bad_values(playertext):
     with pytest.raises(ValueError):
         playerrow = counter.PlayerRows(text=playertext)
+
+
+
+@pytest.mark.parametrize('playertext', BAD_PLAYER_ROWS)
+def test_bad_player_row_wrong_chars_detect(playertext):
+    is_wrongchars = any(map(lambda x: x not in 'd23456789t ', str(playertext)))
+    is_wrongchars = is_wrongchars if playertext else True
+
+    assert is_wrongchars
