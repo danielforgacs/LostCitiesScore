@@ -1,2 +1,3 @@
 COLOUR_SEPARATOR = ' '
 TEN_TOKENS = ['1', 't']
+VALID_CHARS = 'd23456789t ' + ''.join(TEN_TOKENS)

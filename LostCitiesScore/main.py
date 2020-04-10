@@ -26,7 +26,7 @@ def main():
         print('Round: {}'.format(rnd))
 
         scoretext = input('\tPlayer 1 cards: ')
-        roundscore = counter.main(text=scoretext)
+        roundscore = counter.PlayerRows(text=scoretext).value
         player_one += roundscore
         print('\t   round score: {}'.format(roundscore))
         print('\t   total score: {}'.format(player_one))
@@ -34,7 +34,7 @@ def main():
         print()
 
         scoretext = input('\tPlayer 2 cards: ')
-        roundscore = counter.main(text=scoretext)
+        roundscore = counter.PlayerRows(text=scoretext).value
         player_two += roundscore
         print('\t   round score: {}'.format(roundscore))
         print('\t   total score: {}'.format(player_two))
